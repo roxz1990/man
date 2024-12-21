@@ -1,0 +1,25 @@
+version: 2.1
+
+jobs:
+  run-python-script:
+    docker:
+      - image: circleci/python:3.8  # You can change the version as needed
+    steps:
+      - checkout  # This checks out the code from your repo
+      - run:
+          name: Install dependencies
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt  # Assuming you have a requirements.txt file
+      - run:
+          name: Run the Python script
+          command: |
+            . venv/bin/activate
+            python3 monster.py  # Replace with the name of your Python file
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - run-python-script
