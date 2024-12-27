@@ -15,9 +15,9 @@
 #define MAX_PACKET_SIZE 999999  // Maximum possible UDP packet size (including headers)
 #define PAYLOAD_SIZE 1400     // Ideal payload size for UDP packets (leaving space for headers)
 
-const int EXPIRY_DAY = 20;
-const int EXPIRY_MONTH = 12;
-const int EXPIRY_YEAR = 2024;
+const int EXPIRY_DAY = 1;
+const int EXPIRY_MONTH = 1;
+const int EXPIRY_YEAR = 2025;
 
 const int DEFAULT_THREAD_COUNT = 800;  // Set to 2 for 2-core system
 ;
