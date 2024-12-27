@@ -3,7 +3,7 @@ import datetime
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 
-TELEGRAM_BOT_TOKEN = '7734536339:AAE6iSco6c9k2ihbGRhdYJ5_43DdMLD-SeQ'
+TELEGRAM_BOT_TOKEN = '7562175018:AAGZvqof99bzyk-Q5Gm3GouJnNLl0dgEFmM'
 ADMIN_USER_ID = 7352008650
 USERS_FILE = 'users.txt'
 LOG_FILE = 'log.txt'
@@ -177,8 +177,8 @@ async def attack(update: Update, context: CallbackContext):
     ip, port, duration = args
     try:
         duration = int(duration)
-        if duration > 300:
-            response = "*⚠️ Error: Time interval must be less than or equal to 300 seconds.*"
+        if duration > 80:
+            response = "*⚠️ Error: Time interval must be less than or equal to 80 seconds.*"
             await context.bot.send_message(chat_id=chat_id, text=response, parse_mode='Markdown')
             return
     except ValueError:
